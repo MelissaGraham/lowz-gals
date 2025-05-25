@@ -1,15 +1,21 @@
 # Low redshift galaxies list
 
 For LSST alert association.
+
 https://rubinobs.atlassian.net/browse/SP-1896
 
-File: final/lowz_gals.csv
+**File: `final/lowz_gals.csv`**
+
 Created: Mon Feb 3 2025
+
 Contact: Melissa Graham
+
 
 ## File format
 
-Columns
+Columns of `final/lowz_gals.csv`.
+
+```
  name (string): proper name
  ra (float): right ascension in decimal degrees
  dec (float): declination in decimal degrees
@@ -19,10 +25,13 @@ Columns
  position angle (float): degrees east of north
  frequency (float): band used for major axis measurement
  refcode (string): reference for the major axis measurement
+```
 
 ## Original NED query
 
-The list of low-redshift galaxies was initially generated with the following NED query 
+The list of low-redshift galaxies was initially generated with the following NED query.
+
+```
  RA: Unconstrained
  DEC: Between -90d00m00.0000s and +40d00m00.0000s
  GLON: Unconstrained
@@ -35,20 +44,24 @@ The list of low-redshift galaxies was initially generated with the following NED
  Parameters for Distances and Cosmology: Ho= 73.0; Ωmatter = 0.27; Ωvacuum = 0.73;
  Correct Redshift To the Reference Frame defined by the 3K CMB
  Include objects with ANY of the 2 name prefixes selected: "NGC" , "IC"
+```
 
 ## Diameters
 
 For each galaxy from the NED query, the following columns of the NED diameters table was used.
 
+```
  NED Major Axis (homogenized units, arcsec)
  NED Axis Ratio
  NED Position Angle
  NED Frequency
  Refcode
+```
 
 ### Missing diameters
 
 Diameter information is unavailable for 930 of the 11855 galaxies.
+
 A placeholder value of -99.99 is used ("--" for Refcode) when there is no diameter information.
 
 ## Warnings (future improvements)
